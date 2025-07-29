@@ -1,0 +1,875 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دیاکو VPN - امنیت و آزادی در دنیای اینترنت</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <!-- Begin Verbox {literal} -->
+<script>
+    (function(){(function c(d,w,m,i) {
+        window.supportAPIMethod = m;
+        var s = d.createElement('script');
+        s.id = 'supportScript'; 
+        var id = '6db9065a4e0c722c934e1d9699ba14c5';
+        s.src = (!i ? 'https://admin.verbox.ru/support/support.js' : 'https://static.site-chat.me/support/support.int.js') + '?h=' + id;
+        s.onerror = i ? undefined : function(){c(d,w,m,true)};
+        w[m] = w[m] ? w[m] : function(){(w[m].q = w[m].q ? w[m].q : []).push(arguments);};
+        (d.head ? d.head : d.body).appendChild(s);
+    })(document,window,'Verbox')})();
+</script>
+ <script>
+      window.VerboxSettings = {
+        id: "6db9065a4e0c722c934e1d9699ba14c5",
+        domain: "diyakovpn6.site",
+        lang: "en"
+      };
+    </script>
+    <script src="https://chat.integracio.ru/static/js/widget.js"></script>
+
+<!-- {/literal} End Verbox -->
+	<style>
+		  .telegram-button {
+    position: fixed;
+    bottom: 100px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .telegram-button img {
+    width: 40px;
+    height: 40px;
+  }
+	/* استایل‌های جدید برای پشتیبانی آنلاین */
+        .support-widget {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+        }
+
+        .support-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #22c55e; /* رنگ سبز */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+            transition: all 0.3s;
+        }
+
+        .support-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.6);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Vazirmatn, sans-serif;
+        }
+        
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0ea5e9;
+            --dark: #0f172a;
+            --light: #f1f5f9;
+            --accent: #f97316;
+            --success: #22c55e;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles - Mobile Friendly */
+        header {
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+        }
+        
+        .logo i {
+            color: var(--secondary);
+            margin-left: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .nav-links a:hover {
+            color: white;
+        }
+        
+        .cta-button {
+            background: var(--primary);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+            font-size: 0.9rem;
+        }
+        
+        .cta-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(37, 99, 235, 0.4);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section - Mobile First */
+        .hero {
+            padding: 140px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 100%;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.3rem;
+            font-weight: 900;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #38bdf8, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #cbd5e1;
+            max-width: 100%;
+            padding: 0 10px;
+        }
+        
+.main-cta {
+    background: var(--accent);
+    padding: 18px 55px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    box-shadow: 0 6px 15px rgba(249, 115, 22, 0.4);
+    margin: 0 auto;
+    display: inline-block;
+}
+        
+        .main-cta:hover {
+            background: #ea580c;
+            transform: translateY(-3px);
+        }
+        
+        .hero-image {
+            margin-top: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-image::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(15, 23, 42, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 70px 0;
+            background: rgba(30, 41, 59, 0.5);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .feature-card {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid rgba(56, 189, 248, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(56, 189, 248, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .feature-icon i {
+            font-size: 1.8rem;
+            color: var(--secondary);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+        }
+        
+        /* VPN Plans */
+        .plans {
+            padding: 70px 0;
+        }
+        
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .plan-card {
+            background: rgba(15, 23, 42, 0.7);
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(56, 189, 248, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .plan-card.popular {
+            border: 2px solid var(--accent);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .plan-name {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        .plan-price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .plan-price span {
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .plan-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            font-size: 0.95rem;
+        }
+        
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(15, 23, 42, 0.9);
+            padding: 50px 0 20px;
+            border-top: 1px solid rgba(56, 189, 248, 0.1);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .footer-column p {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .footer-links i {
+            width: 20px;
+            margin-left: 8px;
+            color: var(--secondary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--secondary);
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+        
+        /* Mobile Menu */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background: rgba(15, 23, 42, 0.98);
+            z-index: 1100;
+            padding: 80px 30px 30px;
+            transition: right 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .mobile-nav.active {
+            right: 0;
+        }
+        
+        .mobile-nav-links {
+            list-style: none;
+        }
+        
+        .mobile-nav-links li {
+            margin-bottom: 20px;
+        }
+        
+        .mobile-nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Responsive Design - Mobile First */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 120px 0 50px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .features-grid,
+            .plans-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .plan-card.popular {
+                transform: scale(1);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .hero-content {
+                max-width: 600px;
+                text-align: right;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                max-width: 90%;
+                padding: 0;
+            }
+            
+            .hero-image {
+                margin-top: 0;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 50%;
+                opacity: 0.8;
+            }
+            
+            .hero-image::before {
+                width: 400px;
+                height: 400px;
+            }
+            
+            .mobile-nav {
+                display: none;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.3rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .plans-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .plan-card.popular {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileNavClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="#">خانه</a></li>
+            <li><a href="#">پلن‌ها</a></li>
+            <li><a href="#">سرورها</a></li>
+            <li><a href="https://chat.integracio.ru/6db9065a4e0c722c934e1d9699ba14c5/diyakovpn6.site/en" target="_blank">تماس با ما</a></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    دیاکو 
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">خانه</a></li>
+                    <li><a href="#">پلن‌ها</a></li>
+                    <li><a href="#">سرورها</a></li>
+                    <li><a href="https://chat.integracio.ru/6db9065a4e0c722c934e1d9699ba14c5/diyakovpn6.site/en" target="_blank">تماس با ما</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>مرزهای اینترنت را درنوردید!</h1>
+                <p>با دیاکو  به آزادی و امنیت واقعی در دنیای وب دست پیدا کنید. بدون محدودیت، بدون افت سرعت و با تضمین حریم خصوصی شما.</p>
+                <a href="https://chat.integracio.ru/6db9065a4e0c722c934e1d9699ba14c5/diyakovpn6.site/en" target="_blank" class="cta-button main-cta">دریافت تست رایگان 😍</a>
+            </div>
+            <div class="hero-image">
+                <img src="data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='800' height='500' viewBox='0 0 800 500'%3e%3crect fill='%231e293b' width='800' height='500'/%3e%3cpath fill='%230f172a' d='M0 0l800 500H0V0z'/%3e%3ccircle fill='%2338bdf8' opacity='0.2' cx='400' cy='250' r='200'/%3e%3ccircle fill='%2338bdf8' opacity='0.3' cx='400' cy='250' r='150'/%3e%3ccircle fill='%2338bdf8' opacity='0.4' cx='400' cy='250' r='100'/%3e%3c/svg%3e" alt="دیاکو VPN">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">چرا دیاکو ؟</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>امنیت فوق‌العاده</h3>
+                    <p>با پروتکل‌های پیشرفته رمزنگاری، اطلاعات شما همیشه در امنیت کامل خواهد بود.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>سرعت بالا</h3>
+                    <p>با سرورهای پرسرعت در سراسر جهان، بدون افت سرعت به وبگردی بپردازید.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>دسترسی جهانی</h3>
+                    <p>به بیش از ۵۰ کشور و صدها سرور در سراسر جهان متصل شوید.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>حفاظت کامل</h3>
+                    <p>حفظ حریم خصوصی و جلوگیری از ردیابی فعالیت‌های آنلاین شما.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>ناشناس ماندن</h3>
+                    <p>آی‌پی شما مخفی می‌شود و به صورت ناشناس در اینترنت گشت‌وگذار می‌کنید.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>بدون قطعی</h3>
+                    <p>اتصال پایدار و بدون قطعی حتی در شبکه‌های ضعیف.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VPN Plans -->
+    <section class="plans">
+        <div class="container">
+            <h2 class="section-title">پلن‌های اشتراک</h2>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <h3 class="plan-name">یکماهه تک کاربره</h3>
+                    <div class="plan-price">۱۵۳,۰۰۰ <span>تومان/ماه</span></div>
+                    <ul class="plan-features">
+                        <li>سرعت تا ۱۰۰ مگابیت</li>
+                        <li>بیش از ۶ لوکیشن</li>
+                        <li>پشتیبانی ۲۴ ساعته</li>
+                        <li>بدون محدودیت ترافیک</li>
+                    </ul>
+                    <a href="https://chat.integracio.ru/6db9065a4e0c722c934e1d9699ba14c5/diyakovpn6.site/en" target="_blank" class="cta-button">خرید پلن</a>
+                </div>
+                <div class="plan-card popular">
+                    <div class="popular-badge">پیشنهاد ویژه</div>
+                    <h3 class="plan-name">یکماهه دوکاربره</h3>
+                    <div class="plan-price">۱۹۸.۰۰۰<span>تومان/ماه</span></div>
+                    <ul class="plan-features">
+                        <li>سرعت تا ۵۰۰ مگابیت</li>
+                        <li>بیش از ۶ لوکیشن/li>
+                        <li>پشتیبانی VIP</li>
+                        <li>بدون محدودیت ترافیک</li>
+                    </ul>
+			
+                    <a href="https://chat.integracio.ru/6db9065a4e0c722c934e1d9699ba14c5/diyakovpn6.site/en" target="_blank" class="cta-button">خرید پلن</a>
+                </div>
+                <div class="plan-card">
+                    <h3 class="plan-name">یکماهه دوکاربره VIP</h3>
+                    <div class="plan-price">۲۵۹.۰۰۰ <span>تومان/ماه</span></div>
+                    <ul class="plan-features">
+                        <li>سرعت تا ۱ گیگابیت</li>
+                        <li>بیش از ۶ لوکیشن/li>
+                        <li>پشتیبانی اختصاصی</li>
+                        <li>بدون محدودیت ترافیک</li>
+                    </ul>
+                    <a href="https://chat.integracio.ru/6db9065a4e0c722c934e1d9699ba14c5/diyakovpn6.site/en" target="_blank" class="cta-button">خرید پلن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+	<!-- دکمه پشتیبانی آنلاین -->
+    <a href="https://chat.integracio.ru/6db9065a4e0c722c934e1d9699ba14c5/diyakovpn6.site/en" target="_blank" ><div class="support-widget">
+        <div class="support-button" onclick="Verbox('open')">   
+		<i class="fas fa-headset"></i>
+        </div>
+    </div></a>
+	<a href="https://t.me/diyako_support" target="_blank">
+<div class="telegram-button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+</div></a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>درباره دیاکو</h3>
+                    <p>دیاکو  با بیش از ۵ سال سابقه، ارائه‌دهنده‌ای مطمئن در زمینه خدمات  با سرورهای پرسرعت در سراسر جهان می‌باشد.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>لینک‌های مفید</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-download"></i>دانلود اپلیکیشن</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i>راهنمای نصب</a></li>
+                        <li><a href="#"><i class="fas fa-blog"></i>وبلاگ</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i>سوالات متداول</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i>قوانین و مقررات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>تماس با ما</h3>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>تمامی حقوق برای دیاکو  محفوظ است. © ۱۴۰۲</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNavClose = document.getElementById('mobileNavClose');
+        const mobileNav = document.getElementById('mobileNav');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileNav.classList.add('active');
+        });
+        
+        mobileNavClose.addEventListener('click', function() {
+            mobileNav.classList.remove('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (mobileNav.classList.contains('active') {
+                if (!mobileNav.contains(event.target) {
+                    mobileNav.classList.remove('active');
+                }
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mobileNav.classList.contains('active')) {
+                        mobileNav.classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
