@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -7,29 +6,7 @@
     <title>دیاکو VPN - امنیت و آزادی در دنیای اینترنت</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
-    <!-- Begin Verbox {literal} -->
-<script>
-    (function(){(function c(d,w,m,i) {
-        window.supportAPIMethod = m;
-        var s = d.createElement('script');
-        s.id = 'supportScript'; 
-        var id = '6db9065a4e0c722c934e1d9699ba14c5';
-        s.src = (!i ? 'https://admin.verbox.ru/support/support.js' : 'https://static.site-chat.me/support/support.int.js') + '?h=' + id;
-        s.onerror = i ? undefined : function(){c(d,w,m,true)};
-        w[m] = w[m] ? w[m] : function(){(w[m].q = w[m].q ? w[m].q : []).push(arguments);};
-        (d.head ? d.head : d.body).appendChild(s);
-    })(document,window,'Verbox')})();
-</script>
- <script>
-      window.VerboxSettings = {
-        id: "6db9065a4e0c722c934e1d9699ba14c5",
-        domain: "diyakovpn6.site",
-        lang: "en"
-      };
-    </script>
-    <script src="https://chat.integracio.ru/static/js/widget.js"></script>
-
-<!-- {/literal} End Verbox -->
+    <!-- Only keeping Crisp for chat -->
 	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="888c3c31-01ad-4e36-bea1-94df8bef67e8";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
 	<style>
@@ -46,16 +23,13 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 999;
   }
   .telegram-button img {
     width: 40px;
     height: 40px;
   }
 		.support-widget {
-display: none;
-		}
-	/* استایل‌های جدید برای پشتیبانی آنلاین */
-        .support-widget {
             position: fixed;
             bottom: 30px;
             left: 30px;
@@ -334,6 +308,23 @@ display: none;
         .feature-card p {
             font-size: 0.95rem;
             color: #cbd5e1;
+            min-height: 50px;
+        }
+
+        .os-icons, .flags {
+            margin-top: 15px;
+            font-size: 1.8rem;
+            color: #94a3b8;
+        }
+
+        .os-icons i {
+            margin: 0 8px;
+        }
+
+        .flags img {
+            margin: 0 5px;
+            height: 24px;
+            border-radius: 3px;
         }
         
         /* VPN Plans */
@@ -355,13 +346,19 @@ display: none;
             text-align: center;
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(249, 115, 22, 0.2);
             transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .plan-card .plan-features {
+            flex-grow: 1;
         }
         
         .plan-card:hover {
             transform: translateY(-10px);
-            border-color: rgba(56, 189, 248, 0.3);
+            border-color: rgba(249, 115, 22, 0.5);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
         
@@ -384,13 +381,14 @@ display: none;
         .plan-name {
             font-size: 1.6rem;
             margin-bottom: 15px;
-            color: var(--secondary);
+            color: var(--accent);
         }
         
         .plan-price {
             font-size: 2.2rem;
             font-weight: 700;
             margin-bottom: 20px;
+            color: white;
         }
         
         .plan-price span {
@@ -411,6 +409,16 @@ display: none;
         
         .plan-features li:last-child {
             border-bottom: none;
+        }
+
+        .plan-card .cta-button {
+             background-color: var(--accent);
+             box-shadow: 0 4px 6px rgba(249, 115, 22, 0.3);
+        }
+
+        .plan-card .cta-button:hover {
+             background-color: #ea580c;
+             box-shadow: 0 6px 8px rgba(249, 115, 22, 0.4);
         }
         
         /* Footer */
@@ -655,9 +663,9 @@ display: none;
         </button>
         <ul class="mobile-nav-links">
             <li><a href="#">خانه</a></li>
-            <li><a href="#">پلن‌ها</a></li>
+            <li><a href="#plans">پلن‌ها</a></li>
             <li><a href="#">سرورها</a></li>
-            <li><a href="https://chat.integracio.ru/6db9065a4e0c722c934e1d9699ba14c5/diyakovpn6.site/en" target="_blank">تماس با ما</a></li>
+            <li><a href="https://go.crisp.chat/chat/embed/?website_id=888c3c31-01ad-4e36-bea1-94df8bef67e8" target="_blank">تماس با ما</a></li>
         </ul>
     </div>
 
@@ -671,9 +679,9 @@ display: none;
                 </div>
                 <ul class="nav-links">
                     <li><a href="#">خانه</a></li>
-                    <li><a href="#">پلن‌ها</a></li>
+                    <li><a href="#plans">پلن‌ها</a></li>
                     <li><a href="#">سرورها</a></li>
-                    <li><a href="https://chat.integracio.ru/6db9065a4e0c722c934e1d9699ba14c5/diyakovpn6.site/en" target="_blank">تماس با ما</a></li>
+                    <li><a href="https://go.crisp.chat/chat/embed/?website_id=888c3c31-01ad-4e36-bea1-94df8bef67e8" target="_blank">تماس با ما</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -707,68 +715,126 @@ display: none;
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
+                        <i class="fas fa-lock"></i>
                     </div>
-                    <h3>دسترسی جهانی</h3>
-                    <p>به بیش از ۵۰ کشور و صدها سرور در سراسر جهان متصل شوید.</p>
+                    <h3>نصب آسان و سریع</h3>
+                    <p>قابلیت اتصال روی انواع سیستم عامل ها</p>
+                    <div class="os-icons">
+                        <i class="fab fa-android"></i>
+                        <i class="fab fa-apple"></i>
+                        <i class="fab fa-windows"></i>
+                    </div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-plug"></i>
+                        <i class="fas fa-globe"></i>
                     </div>
-                    <h3>بدون قطعی</h3>
-                    <p>اتصال پایدار و بدون قطعی حتی در شبکه‌های ضعیف.</p>
+                    <h3>دسترسی جهانی</h3>
+                    <p>با خرید یک سرویس میتوانید به ۶ کشور مختلف وصل شوید.</p>
+                    <div class="flags">
+                        <img src="https://flagcdn.com/h24/us.png" alt="پرچم آمریکا">
+                        <img src="https://flagcdn.com/h24/gb.png" alt="پرچم انگلیس">
+                        <img src="https://flagcdn.com/h24/ca.png" alt="پرچم کانادا">
+                        <img src="https://flagcdn.com/h24/tr.png" alt="پرچم ترکیه">
+                        <img src="https://flagcdn.com/h24/de.png" alt="پرچم آلمان">
+                        <img src="https://flagcdn.com/h24/nl.png" alt="پرچم هلند">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- VPN Plans -->
-    <section class="plans">
+    <section class="plans" id="plans">
         <div class="container">
             <h2 class="section-title">پلن‌های اشتراک</h2>
             <div class="plans-grid">
+                <!-- New Plan 1 -->
                 <div class="plan-card">
-                    <h3 class="plan-name">یکماهه تک کاربره</h3>
-                    <div class="plan-price">۱۵۳,۰۰۰ <span>تومان/ماه</span></div>
+                    <h3 class="plan-name">سه ماهه تک‌کاربره</h3>
+                    <div class="plan-price">۳۹۶,۰۰۰ <span>تومان</span></div>
                     <ul class="plan-features">
-                        <li>سرعت تا ۱۰۰ مگابیت</li>
-                        <li>بیش از ۶ لوکیشن</li>
-                        <li>پشتیبانی ۲۴ ساعته</li>
-                        <li>بدون محدودیت ترافیک</li>
+                        <li>بیش از 6 لوکیشن</li>
+                        <li>آیپی ثابت</li>
+                        <li>ترافیک نامحدود</li>
+                        <li>قابلیت Kill-Switch</li>
+                        <li>تحویل آنی</li>
                     </ul>
-                    <a href="https://chat.integracio.ru/6db9065a4e0c722c934e1d9699ba14c5/diyakovpn6.site/en" target="_blank" class="cta-button">خرید پلن</a>
+                    <a href="https://go.crisp.chat/chat/embed/?website_id=888c3c31-01ad-4e36-bea1-94df8bef67e8" target="_blank" class="cta-button">خرید سرویس</a>
                 </div>
+                <!-- New Plan 2 -->
+                <div class="plan-card">
+                    <h3 class="plan-name">دوماهه تک‌کاربره</h3>
+                    <div class="plan-price">۲۶۹,۰۰۰ <span>تومان</span></div>
+                    <ul class="plan-features">
+                        <li>بیش از 6 لوکیشن</li>
+                        <li>آیپی ثابت</li>
+                        <li>ترافیک نامحدود</li>
+                        <li>قابلیت Kill-Switch</li>
+                        <li>تحویل آنی</li>
+                    </ul>
+                    <a href="https://go.crisp.chat/chat/embed/?website_id=888c3c31-01ad-4e36-bea1-94df8bef67e8" target="_blank" class="cta-button">خرید سرویس</a>
+                </div>
+                <!-- New Plan 3 -->
+                <div class="plan-card">
+                    <h3 class="plan-name">یکماهه تک‌کاربره</h3>
+                    <div class="plan-price">۱۵۰,۰۰۰ <span>تومان</span></div>
+                    <ul class="plan-features">
+                        <li>بیش از 6 لوکیشن</li>
+                        <li>آیپی ثابت</li>
+                        <li>ترافیک نامحدود</li>
+                        <li>قابلیت Kill-Switch</li>
+                        <li>تحویل آنی</li>
+                    </ul>
+                    <a href="https://go.crisp.chat/chat/embed/?website_id=888c3c31-01ad-4e36-bea1-94df8bef67e8" target="_blank" class="cta-button">خرید سرویس</a>
+                </div>
+
+                <!-- Plan 1 -->
+                <div class="plan-card">
+                    <h3 class="plan-name">سه ماهه دوکاربره</h3>
+                    <div class="plan-price">۵۲۹,۰۰۰ <span>تومان</span></div>
+                    <ul class="plan-features">
+                        <li>بیش از 6 لوکیشن</li>
+                        <li>آیپی ثابت</li>
+                        <li>ترافیک نامحدود</li>
+                        <li>قابلیت Kill-Switch</li>
+                        <li>تحویل آنی</li>
+                    </ul>
+                    <a href="https://go.crisp.chat/chat/embed/?website_id=888c3c31-01ad-4e36-bea1-94df8bef67e8" target="_blank" class="cta-button">خرید سرویس</a>
+                </div>
+                <!-- Plan 2 (Popular) -->
                 <div class="plan-card popular">
-                    <div class="popular-badge">پیشنهاد ویژه</div>
-                    <h3 class="plan-name">یکماهه دوکاربره</h3>
-                    <div class="plan-price">۱۹۸.۰۰۰<span>تومان/ماه</span></div>
+                     <div class="popular-badge">پیشنهاد ویژه</div>
+                    <h3 class="plan-name">دوماهه دوکاربره</h3>
+                    <div class="plan-price">۳۵۹,۰۰۰ <span>تومان</span></div>
                     <ul class="plan-features">
-                        <li>سرعت تا ۵۰۰ مگابیت</li>
-                        <li>بیش از ۶ لوکیشن/li>
-                        <li>پشتیبانی VIP</li>
-                        <li>بدون محدودیت ترافیک</li>
+                        <li>بیش از 6 لوکیشن</li>
+                        <li>آیپی ثابت</li>
+                        <li>ترافیک نامحدود</li>
+                        <li>قابلیت Kill-Switch</li>
+                        <li>تحویل آنی</li>
                     </ul>
-			
-                    <a href="https://chat.integracio.ru/6db9065a4e0c722c934e1d9699ba14c5/diyakovpn6.site/en" target="_blank" class="cta-button">خرید پلن</a>
+                    <a href="https://go.crisp.chat/chat/embed/?website_id=888c3c31-01ad-4e36-bea1-94df8bef67e8" target="_blank" class="cta-button">خرید سرویس</a>
                 </div>
+                <!-- Plan 3 -->
                 <div class="plan-card">
-                    <h3 class="plan-name">یکماهه دوکاربره VIP</h3>
-                    <div class="plan-price">۲۵۹.۰۰۰ <span>تومان/ماه</span></div>
+                    <h3 class="plan-name">یکماهه دوکاربره</h3>
+                    <div class="plan-price">۲۰۰,۰۰۰ <span>تومان</span></div>
                     <ul class="plan-features">
-                        <li>سرعت تا ۱ گیگابیت</li>
-                        <li>بیش از ۶ لوکیشن/li>
-                        <li>پشتیبانی اختصاصی</li>
-                        <li>بدون محدودیت ترافیک</li>
+                        <li>بیش از 6 لوکیشن</li>
+                        <li>آیپی ثابت</li>
+                        <li>ترافیک نامحدود</li>
+                        <li>قابلیت Kill-Switch</li>
+                        <li>تحویل آنی</li>
                     </ul>
-                    <a href="https://chat.integracio.ru/6db9065a4e0c722c934e1d9699ba14c5/diyakovpn6.site/en" target="_blank" class="cta-button">خرید پلن</a>
+                    <a href="https://go.crisp.chat/chat/embed/?website_id=888c3c31-01ad-4e36-bea1-94df8bef67e8" target="_blank" class="cta-button">خرید سرویس</a>
                 </div>
             </div>
         </div>
     </section>
 	<!-- دکمه پشتیبانی آنلاین -->
-    <a href="https://chat.integracio.ru/6db9065a4e0c722c934e1d9699ba14c5/diyakovpn6.site/en" target="_blank" ><div class="support-widget">
-        <div class="support-button" onclick="Verbox('open')">   
+    <a href="https://go.crisp.chat/chat/embed/?website_id=888c3c31-01ad-4e36-bea1-94df8bef67e8" target="_blank" ><div class="support-widget">
+        <div class="support-button">   
 		<i class="fas fa-headset"></i>
         </div>
     </div></a>
@@ -825,10 +891,11 @@ display: none;
             mobileNav.classList.remove('active');
         });
         
-        // Close mobile menu when clicking outside
+        // Close mobile menu when clicking outside of it
         document.addEventListener('click', function(event) {
-            if (mobileNav.classList.contains('active') {
-                if (!mobileNav.contains(event.target) {
+            if (mobileNav.classList.contains('active')) {
+                // Check if the click was outside the nav and not on the menu button
+                if (!mobileNav.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
                     mobileNav.classList.remove('active');
                 }
             }
@@ -854,3 +921,4 @@ display: none;
     </script>
 </body>
 </html>
+
