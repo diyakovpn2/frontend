@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دیاکو VPN - امنیت و آزادی در دنیای اینترنت</title>
+    <!-- عنوان صفحه برای جلوگیری از حساسیت گوگل تغییر کرد -->
+    <title>دیاکو - امنیت و آزادی در دنیای اینترنت</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
     <!-- Only keeping Crisp for chat -->
@@ -262,6 +263,15 @@
             background: var(--secondary);
             border-radius: 2px;
         }
+
+        /* متن اضافه شده برای زیرعنوان پلن ها */
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: -30px auto 40px;
+        }
         
         .features-grid {
             display: grid;
@@ -327,7 +337,7 @@
             border-radius: 3px;
         }
         
-        /* VPN Plans */
+        /* Plans */
         .plans {
             padding: 70px 0;
         }
@@ -421,6 +431,28 @@
              box-shadow: 0 6px 8px rgba(249, 115, 22, 0.4);
         }
         
+        /* Extra Info Section - استایل های بخش اضافه شده */
+        .extra-info {
+            padding: 50px 0;
+        }
+        .extra-info-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            background: rgba(15, 23, 42, 0.7);
+            border-radius: 15px;
+            padding: 30px 40px;
+            border: 1px solid rgba(56, 189, 248, 0.1);
+        }
+        .extra-info-content p {
+            font-size: 1rem;
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+         .extra-info-content p:first-child {
+            margin-bottom: 20px;
+         }
+
         /* Footer */
         footer {
             background: rgba(15, 23, 42, 0.9);
@@ -744,10 +776,12 @@
         </div>
     </section>
 
-    <!-- VPN Plans -->
+    <!-- Plans -->
     <section class="plans" id="plans">
         <div class="container">
             <h2 class="section-title">پلن‌های اشتراک</h2>
+            <!-- متن زیرعنوان اضافه شد -->
+			<p class="section-subtitle">پلن متناسب با نیاز خود را انتخاب کنید و همین امروز اتصال امن خود را شروع کنید.</p>
             <div class="plans-grid">
                 <!-- New Plan 1 -->
                 <div class="plan-card">
@@ -832,6 +866,18 @@
             </div>
         </div>
     </section>
+
+    <!-- New Text Section - بخش جدید اضافه شده -->
+    <section class="extra-info">
+        <div class="container">
+            <h2 class="section-title">تعهد ما به کیفیت و امنیت</h2>
+            <div class="extra-info-content">
+                <p>در دیاکو، ما فقط یک سرویس ارائه نمی‌دهیم؛ ما یک تجربه‌ی اینترنتی پایدار و بدون دغدغه را تضمین می‌کنیم. تیم پشتیبانی ما به صورت ۲۴ ساعته آماده پاسخگویی به سوالات شماست تا اطمینان حاصل شود که شما همیشه بهترین اتصال ممکن را در اختیار دارید. ما از مدرن‌ترین زیرساخت‌ها استفاده می‌کنیم تا سرعتی بی‌نظیر و پایداری بالا را برای همه‌ی کاربران فراهم آوریم.</p>
+                <p>حفظ حریم خصوصی شما اولویت اصلی ماست. با سرویس‌های اتصال امن دیاکو، اطلاعات شما همیشه محافظت می‌شود. ما باور داریم که دسترسی به اینترنت باید آزادانه و امن باشد. به همین دلیل، استفاده از سرویس‌های ما بسیار آسان است و بر روی تمامی دستگاه‌های شما، از موبایل تا کامپیوتر، به راحتی قابل نصب و راه‌اندازی می‌باشد.</p>
+            </div>
+        </div>
+    </section>
+
 	<!-- دکمه پشتیبانی آنلاین -->
     <a href="https://go.crisp.chat/chat/embed/?website_id=888c3c31-01ad-4e36-bea1-94df8bef67e8" target="_blank" ><div class="support-widget">
         <div class="support-button">   
@@ -849,7 +895,8 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>درباره دیاکو</h3>
-                    <p>دیاکو  با بیش از ۵ سال سابقه، ارائه‌دهنده‌ای مطمئن در زمینه خدمات  با سرورهای پرسرعت در سراسر جهان می‌باشد.</p>
+                    <!-- متن "درباره ما" در فوتر ویرایش شد -->
+                    <p>دیاکو با بیش از ۵ سال سابقه، ارائه‌دهنده‌ای مطمئن در زمینه سرویس‌های اتصال امن با سرورهای پرسرعت در سراسر جهان می‌باشد.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-telegram"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -869,6 +916,11 @@
                 </div>
                 <div class="footer-column">
                     <h3>تماس با ما</h3>
+                    <!-- بخش "تماس با ما" در فوتر تکمیل شد -->
+                    <ul class="footer-links">
+                        <li><a href="https://go.crisp.chat/chat/embed/?website_id=888c3c31-01ad-4e36-bea1-94df8bef67e8" target="_blank"><i class="fas fa-headset"></i>پشتیبانی آنلاین</a></li>
+                        <li><a href="https://t.me/diyako_support" target="_blank"><i class="fab fa-telegram"></i>پشتیبانی تلگرام</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="copyright">
